@@ -2,7 +2,11 @@ from django.shortcuts import render,HttpResponse
 
 # Create your views here.
 def index(request):
-    context={ 'student_count':'1203', }
+    context={ 'student_count':'1203',
+                'course_count':32,
+                'trainer_count':8,
+                'event_count':50,
+     }
     return render(request,'index.html',context)
 
 def about(request):
