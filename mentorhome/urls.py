@@ -4,6 +4,7 @@ from mentorhome import views
 
 urlpatterns = [
     path('',views.index,name='home'),
+    path('index.html',views.index,name='home'),
     path('about.html',views.about,name='about'),
     path('courses.html',views.courses,name='courses'),
     path('trainers.html',views.trainers,name='trainers'),
