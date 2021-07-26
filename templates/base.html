@@ -112,11 +112,11 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Mentor</h3>
             <p>
-              A108 Adam Street <br>
+              {% comment %} A108 Adam Street <br>
               New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              United States <br><br> {% endcomment %}
+              <strong>Phone:</strong> +91 7758890744<br>
+              <strong>Email:</strong> coder32767@gmail.com<br>
             </p>
           </div>
 
@@ -142,13 +142,13 @@
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
+          {% comment %} <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
+            <form action="" method="post">{% csrf_token %}
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
-          </div>
+          </div> {% endcomment %}
 
         </div>
       </div>
@@ -165,7 +165,7 @@
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          {% comment %} Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> {% endcomment %}
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
