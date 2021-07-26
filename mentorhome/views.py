@@ -1,15 +1,19 @@
 from django.shortcuts import render, HttpResponse
-from django.db import models
+from .models import Course,Trainer
+
+courses_details = Course.objects.all()
+trainers_details = Trainer.objects.all()
+
 
 # Create your views here.
 
-
 def index(request):
-    context = {'student_count': '1203',
+    context = {'student_count': 1203,
                'course_count': 32,
                'trainer_count': 8,
                'event_count': 50,
                }
+    print(courses_details)
     return render(request, 'index.html', context)
 
 
@@ -34,4 +38,10 @@ def pricing(request):
 
 
 def trainers(request):
-    return render(request, 'trainers.html')
+    context = {
+        'trainers_details' : trainers_details,
+    }
+    print(trainers_details)
+    trainers_array=[]
+    print(trainers_details[0])
+    return render(request, 'trainers.html', context)

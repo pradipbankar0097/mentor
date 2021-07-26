@@ -10,10 +10,11 @@ class Course(models.Model):
     course_duration = models.IntegerField()
     tutor = models.CharField(max_length=50)
     tutor_code = models.CharField(max_length=10)
-    course_code = models.CharField(max_length=10,primary_key=True)
+    course_code = models.CharField(max_length=10, primary_key=True)
+
 
 class Trainer(models.Model):
     trainer_name = models.CharField(max_length=50)
+    trainer_field = models.CharField(max_length=40,default='Programming')
+    trainer_details = models.CharField(max_length=200,default='Trainer details are to be filled in this part.')
     trainer_code = models.CharField(max_length=10)
-
-
