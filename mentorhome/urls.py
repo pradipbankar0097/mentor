@@ -11,5 +11,10 @@ urlpatterns = [
     path('contact.html',views.contact,name='contact'),
     path('pricing.html',views.pricing,name='pricing'),
     path('events.html',views.events,name='events'),
-    
+    # Here we are assigning the path of our url
+    path('signin', views.signIn),
+    path('postsignIn/', views.postsignIn),
+    path('signUp/', views.signUp, name="signup"),
+    path('logout/', views.logout, name="log"),
+    path('postsignUp/', views.postsignUp),
 ]
