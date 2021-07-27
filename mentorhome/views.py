@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import Course,Trainer
+from .models import Trainer
 
 
 # for firebase
@@ -66,7 +66,7 @@ def postsignUp(request):
 # end for fireabse
 
 
-courses_details = Course.objects.all()
+#courses_details = Course.objects.all()
 trainers_details = Trainer.objects.all()
 
 
@@ -78,7 +78,7 @@ def index(request):
                'trainer_count': 8,
                'event_count': 50,
                }
-    print(courses_details)
+    #print(courses_details)
     return render(request, 'index.html', context)
 
 
