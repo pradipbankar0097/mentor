@@ -1,65 +1,68 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block title %}Mentor-Home{% endblock title %} {%
+block main_content %}
 
-{% block title %}Mentor-Home{% endblock title %}
+<main id="main" data-aos="fade-in">
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <h2>Courses</h2>
+      <p>All courses are conducted by our expert tutors.</p>
+    </div>
+  </div>
+  <!-- End Breadcrumbs -->
 
-{% block main_content %}
+  <!-- ======= Courses Section ======= -->
+  <section id="courses" class="courses">
+    <div class="container" data-aos="fade-up">
+      <div class="row" data-aos="zoom-in" data-aos-delay="100">
+        {% for course in courses_details %}
 
-  <main id="main" data-aos="fade-in">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="course-item">
+            <img src="../static/img/course-3.jpg" class="img-fluid" alt="..." />
+            <div class="course-content">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h4>{{course.course_name}}</h4>
+                <p class="price">₹{{course.course_price}}</p>
+              </div>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-      <div class="container">
-        <h2>Courses</h2>
-        <p>All courses are conducted by our expert tutors.</p>
-      </div>
-    </div><!-- End Breadcrumbs -->
-
-    <!-- ======= Courses Section ======= -->
-    <section id="courses" class="courses">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-
-
-
-{% for course in courses_details %}
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-              <img src="../static/img/course-3.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>{{course.course_name}}</h4>
-                  <p class="price">₹{{course.course_price}}</p>
+              <h3><a href="course-details.html">{{course.course_name}}</a></h3>
+              <p>{{course.details}}</p>
+              <div
+                class="
+                  trainer
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <div class="trainer-profile d-flex align-items-center">
+                  <img
+                    src="../static/img/trainers/pushkar.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <span>{{course.tutor}}</span>
                 </div>
-
-                <h3><a href="course-details.html">{{course.course_name}}</a></h3>
-                <p>{{course.details}}</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
-                  <div class="trainer-profile d-flex align-items-center">
-                    <img src="../static/img/trainers/pushkar.png" class="img-fluid" alt="">
-                    <span>{{course.tutor}}</span>
-                  </div>
-                  <div class="trainer-rank d-flex align-items-center">
-                    <i class="bx bx-user"></i>&nbsp;{{ course.no_of_students }}
-                    &nbsp;&nbsp;
-                    <i class="bx bx-heart"></i>&nbsp;{{ course.no_of_likes }}
-                  </div>
+                <div class="trainer-rank d-flex align-items-center">
+                  <i class="bx bx-user"></i>&nbsp;{{ course.no_of_students }}
+                  &nbsp;&nbsp; <i class="bx bx-heart"></i>&nbsp;{{
+                  course.no_of_likes }}
                 </div>
               </div>
             </div>
-          </div> <!-- End Course Item-->
-
-{% endfor %}
-
-          
-
+          </div>
         </div>
+        <!-- End Course Item-->
 
+        {% endfor %}
       </div>
-    </section><!-- End Courses Section -->
-
-  </main><!-- End #main -->
-
+    </div>
+  </section>
+  <!-- End Courses Section -->
+</main>
+<!-- End #main -->
 
 {% endblock main_content %}
