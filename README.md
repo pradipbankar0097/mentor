@@ -1,6 +1,8 @@
 # mentor
-##To use this repo :
+## To use this repo :
+
 Add fireconfig.py file to /mentorhome directorory. fireconfig.py should contain necessary Firebase configuration as follows :
+
   config = {
     "apiKey": "AIzaSyDHXFxTpdFw9Qi-kOjyPlQtD9fxZyOBvp0",
     "authDomain": "mentor-64363.firebaseapp.com",
