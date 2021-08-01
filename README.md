@@ -12,3 +12,5 @@ Add fireconfig.py file to /mentorhome directorory. fireconfig.py should contain 
     "messagingSenderId": "YourMessagingSenderId",
     "appId": "YourAppId"
   }
+
+Deployment : https://prpcourses.herokuapp.com/
