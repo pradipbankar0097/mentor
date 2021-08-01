@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% block title %}Mentor-Home{% endblock title %} {%
-block main_content %}
+{% extends 'base.html' %} {% block title %}Mentor-Home{% endblock title %} 
+{% block main_content %}
 
 <main id="main" data-aos="fade-in">
   <!-- ======= Breadcrumbs ======= -->
@@ -48,8 +48,7 @@ block main_content %}
                 </div>
                 <div class="trainer-rank d-flex align-items-center">
                   <i class="bx bx-user"></i>&nbsp;{{ course.no_of_students }}
-                  &nbsp;&nbsp; <i class="bx bx-heart"></i>&nbsp;{{
-                  course.no_of_likes }}
+                  &nbsp;&nbsp; <i class="bx bx-heart"></i>&nbsp;{{ course.no_of_likes }}
                 </div>
               </div>
             </div>

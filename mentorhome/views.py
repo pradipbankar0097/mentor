@@ -1,21 +1,12 @@
 from django.shortcuts import render, HttpResponse
 from .models import Trainer,Course
-
+from .fireconfig import config
 
 # for firebase
 
 import pyrebase
 
 
-config = {
-    "apiKey": "AIzaSyDHXFxTpdFw9Qi-kOjyPlQtD9fxZyOBvp0",
-    "authDomain": "mentor-64363.firebaseapp.com",
-    "databaseURL": "mentor-64363-default-rtdb.firebaseio.com/",
-    "projectId": "mentor-64363",
-    "storageBucket": "mentor-64363.appspot.com",
-    "messagingSenderId": "197471931792",
-    "appId": "1:197471931792:web:bab14d60ec5b5234553715"
-}
 # Initialising database,auth and firebase for further use
 firebase = pyrebase.initialize_app(config)
 authe = firebase.auth()
