@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block title %}Mentor-Home{% endblock title %} 
+{% extends 'base.html' %} 
+{% block title %}Mentor-Courses{% endblock title %} 
+
 {% block main_content %}
 
 <main id="main" data-aos="fade-in">
@@ -24,12 +26,12 @@
               <div
                 class="d-flex justify-content-between align-items-center mb-3"
               >
-                <h4>{{course.course_name}}</h4>
-                <p class="price">₹{{course.course_price}}</p>
+                <h4>{{ course.course_name }}</h4>
+                <p class="price">₹{{ course.course_price }}</p>
               </div>
 
-              <h3><a href="course-details.html">{{course.course_name}}</a></h3>
-              <p>{{course.details}}</p>
+              <h3><a href="course-details.html">{{ course.course_name }}</a></h3>
+              <p>{{ course.details }}</p>
               <div
                 class="
                   trainer
@@ -44,7 +46,7 @@
                     class="img-fluid"
                     alt=""
                   />
-                  <span>{{course.tutor}}</span>
+                  <span>{{ course.tutor }}</span>
                 </div>
                 <div class="trainer-rank d-flex align-items-center">
                   <i class="bx bx-user"></i>&nbsp;{{ course.no_of_students }}
