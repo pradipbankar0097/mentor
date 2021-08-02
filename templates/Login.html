@@ -11,7 +11,7 @@
 {% block main_content %}
 
 
- <main id="main">
+<main id="main">
 <form action="/postsignIn/" method="post">
 	{% csrf_token %}
 	<br/>
@@ -29,6 +29,20 @@
 	<input type="checkbox" checked="checked" name="remember"> Remember me
 	</label>
 	<button type="button" onclick="location.href='{% url 'signup' %} '">SignUp</button>
+	{% comment %} for google sign in {% endcomment %}
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="197471931792-enmljq0mskkg9f5m27iut8oo7vojeohm.apps.googleusercontent.com">
+	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+	<script>
+	function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+	</script>
 </form>
 </main>
 {% endblock main_content %}
